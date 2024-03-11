@@ -1,0 +1,84 @@
+body{
+    /* background-image: url("../img/header.jpg"); */
+}
+.nav-header{
+    background-image: url("../img/header.jpg");
+    color: white;
+}
+/* */
+.carousel-program {
+    height: max-content;
+    min-height: max-content;
+}
+.carousel-program img{
+    border-radius: 10px;
+    border: orange 1px solid;
+}
+.carousel-button{
+    opacity: initial;
+    border-radius: 100px;
+    background: rgba(255, 165, 0, 0.83);
+    height: 50px;
+    width: auto;
+    top: 12.25rem;
+    bottom: auto;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.carousel-button:hover{
+    background: orange;
+    opacity: initial;
+}
+
+.event-card{
+    display: block;
+    width: 300px;
+    height: 200px;
+    position: relative
+}
+.event-card:hover{
+    scale: 102%;
+    transition: 0.3s;
+}
+.event-card img{
+    border: orange solid 1px;
+    border-radius: 10px
+}
+
+.event-card img{
+    border: orange solid 1px;
+    border-radius: 10px
+}
+.event-card{
+    color: black;
+}
+.event-card:hover{
+    color: #0e228f;
+}
+.event-card-block{
+    width: 100%;
+    position: absolute;
+    height: 50%;
+    bottom: 10%;
+    background: rgba(255,165,0,0.68);
+    border-radius: 0 5px 5px 0;
+}
+.event-card-days{
+    position: absolute;
+    border-radius: 50px;
+    background: #ffab00;
+    width: 40px;
+    height: 40px;
+    right: -5%;
+    top: -5%;
+    padding: 2px 1px 2px 1px ;
+    border: solid black 1px;
+    z-index: 1;
+}
+
+.block-reservation{
+    border-radius: 10px;
+    border: orange solid 2px;
+    padding: 10px;
+    margin-top: 10px;
+}

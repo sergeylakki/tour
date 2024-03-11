@@ -1,0 +1,33 @@
+{% load django_bootstrap5 %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="block-reservation">
+            <h1 class="text-center">Оставьте заявку. Мы перезвоним и всё расскажем!</h1>
+            <form action="{% url 'reservation' %}" method="post">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <div class="text-end">
+                    <button class="btn btn-success" type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    <script>
+    let event_element = document.getElementById('id_event')
+    let event = '{{ object.id }}'
+    console.log('jb')
+    console.log(event)
+    console.log('{{ request.GET.event }}')
+    if (event) {
+        event_element.parentElement.style.display = 'none'
+        event_element.value = Number(event)
+    }
+    if ('{{ request.GET.event }}'){
+        event_element.parentElement.style.display = 'none'
+        event_element.value = Number('{{ request.GET.event }}')
+    }
+
+</script>
+{% endblock %}

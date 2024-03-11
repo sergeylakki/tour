@@ -1,0 +1,9 @@
+{% load static %}
+{% block content %}
+    <h1 class="text-center">Еда</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            {{ object.eat|safe }}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% block content %}
+    <h1 class="text-center">Стоимость и условия</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-6 p-5">
+            <div class="p-2" style="border-radius: 10px; border: orange solid 2px;">
+                {{ object.сonditions|safe }}
+                <h2>
+                    <p>
+                        Старая цена:
+                        <span class="text-decoration-line-through text-danger">{{ object.old_price }}</span>
+                    </p>
+                    <p class="text-success">
+                        Новая цена:
+                        {{object.price}}
+                    </p>
+                </h2>
+                <button class="btn btn-success">Забронировать</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

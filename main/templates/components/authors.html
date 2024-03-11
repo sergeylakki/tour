@@ -1,0 +1,13 @@
+{% load static %}
+<div class="container marketing mt-4">
+    <div class="row text-center justify-content-center">
+        {% for author in authors %}
+      <div class="col-lg-4">
+        <img src="{{ author.image.url }}" class="bd-placeholder-img rounded-circle" width="140" height="140"  aria-label="Placeholder">
+        <h2 class="fw-normal">{{ author.title }}</h2>
+        <p>{{ author.description }}</p>
+        <!--<p><a class="btn btn-success" href="#">Подробнее</a></p> -->
+      </div><!-- /.col-lg-4 -->
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,21 @@
+{% extends 'components/base.html' %}
+{% load static %}
+{% block content %}
+    {% include 'components/nav.html' %}
+    <div class="row m-1 justify-content-center">
+        {% for item in object_list %}
+            <div class="col-auto p-2">
+                <a href="{% url 'event' item.id %}" class="event-card">
+                    <img src="{{ item.image.url }}" width="300px" height="200px">
+                    <div class="event-card-block">
+                         <h3 class="mx-2">{{ item.title }}</h3>
+                         <h5 class="text-end text-danger">{{ item.price }}р.</h5>
+                    </div>
+                    <div class="event-card-days">
+                        <h3 class="text-center">{{ item.days }}</h3>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
